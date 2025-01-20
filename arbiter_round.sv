@@ -166,7 +166,7 @@ always@(*) begin
 end
 
 always@(posedge clk or negedge rst_n) begin
-    if(rst_n) begin
+    if(!rst_n) begin
         cur_state <= 0;
         nxt_state <= 0;
     end
